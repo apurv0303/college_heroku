@@ -16,7 +16,7 @@ def hello_world():
 
 @app.route('/predict',methods=['POST','GET'])
 def predict():
-     int_features=[]
+    int_features=[]
     for x in request.form.values():
         if(x==''):
             int_features.append(0)
