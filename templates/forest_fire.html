@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>College predictor</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="orange" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">..</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">..</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">..</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">..</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">College Predictor</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the Probability of Getting Admission In Your Dream College
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+
+          <label for="GRE"><b>GRE </b></label>
+            <br>
+          <input id="GRE" name="GRE" placeholder="GRE Score(max 340)"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="TOEFL"><b>TOEFL</b></label>
+            <br>
+          <input placeholder="TOEFL Score(max 120)" name="TOEFL" id="TOEFL" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="University Rating"><b>University Rating</b></label>
+            <br>
+          <input id="UR" name="UR" placeholder="On Scale 1-5" type="text" class="validate">
+
+        </div>
+        
+        
+
+        
+        <div class="input-field col s4">
+            <label for="SOP"><b>Statement of Purpose</b></label>
+            <br>
+          <input id="SOP" name="SOP" placeholder="On Scale 1-5" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="LOR"><b>Letter of Recommendation</b></label>
+            <br>
+          <input id="LOR" name="LOR" placeholder="On Scale 1-5" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="CGPA"><b>CGPA</b></label>
+            <br>
+          <input id="CGPA" name="CGPA" placeholder="CGPA(1-10)" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="re"><b>Research</b></label>
+            <br>
+          <input id="re" name="re" placeholder="0 or 1" type="text" class="validate">
+
+        </div>
+
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Developed by Apurv Singh Jha</h5>
+          <p class="grey-text text-lighten-4">I am currently a 3rd year undergraduate student at IIIT,Una(HP) 
+          My passion and research interest are in the field of data science, natural language processing, and machine learning.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">My other projects</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Auto-correct</a></li>
+            <li><a class="white-text" href="#!">Smart Irrigation System </a></li>
+            <li><a class="white-text" href="#!">Disastrous Tweeet Classifier</a></li>
+            
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect With Me!</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.linkedin.com/in/apurv-singh-jha-a7b354171/">LinkedIn</a></li>
+            <li><a class="white-text" href="https://github.com/apurv0303">Github</a></li>
+            <li><a class="white-text" href="apurvsj.pythonanywhere.com">Website</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Copyright @2020 <a class="orange-text text-lighten-3" href="http://materializecss.com">Apurv.</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
